@@ -24,4 +24,6 @@ if [[ $# -eq 0 ]]
     fi
 
 # Invokes ADB and creates the file with the command line
-adb shell "echo '_ --disable-digital-asset-link-verification-for-url=\"$1\"' > /data/local/tmp/chrome-command-line"
+adb shell "echo '_ --disable-digital-asset-link-verification-for-url=\"$1\"
+  --enable-features="ScrollToExpandPaymentHandler"'
+  > /data/local/tmp/chrome-command-line"

@@ -19,13 +19,13 @@ import groovy.xml.MarkupBuilder;
 apply plugin: 'com.android.application'
 
 def twaManifest = [
-    applicationId: 'org.chromium.twa.svgomg',
-    hostName: 'svgomg.firebaseapp.com', // The domain being opened in the TWA.
-    launchUrl: '/', // The start path for the TWA. Must be relative to the domain.
-    name: 'SVGOMG TWA', // The name shown on the Android Launcher.
-    themeColor: '#303F9F', // The color used for the status bar.
-    navigationColor: '#303F9F', // The color used for the navigation bar.
-    backgroundColor: '#bababa', // The color used for the splash screen background.
+    applicationId: 'io.github.maxlgu',
+    hostName: 'maxlgu.github.io', // The domain being opened in the TWA.
+    launchUrl: '/pr/twa/', // The start path for the TWA. Must be relative to the domain.
+    name: 'Maxlg TWA', // The name shown on the Android Launcher.
+    themeColor: '#c4c4c4', // The color used for the status bar.
+    navigationColor: '#c4c4c4', // The color used for the navigation bar.
+    backgroundColor: '#c4c4c4', // The color used for the splash screen background.
     enableNotifications: false, // Set to true to enable notification delegation.
     // Add shortcuts for your app here. Every shortcut must include the following fields:
     // - name: String that will show up in the shortcut.
@@ -63,7 +63,7 @@ android {
         resValue "string", "crosLaunchUrl", launchUrl
 
         // The hostname is used when building the intent-filter, so the TWA is able to
-        // handle Intents to open https://svgomg.firebaseapp.com.
+        // handle Intents to open the url.
         resValue "string", "hostName", twaManifest.hostName
 
         // This variable below expresses the relationship between the app and the site,
